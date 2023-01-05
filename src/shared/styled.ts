@@ -1,9 +1,12 @@
 import styled, { css } from "styled-components";
 import { Link } from "react-router-dom";
 
+export const main_padding = css`
+  padding: 20px;
+`;
+
 export const inline_padding = css`
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-inline: 20px;
 `;
 
 export const df_ac = css`
@@ -21,12 +24,6 @@ export const df_ac_jc = css`
   display: flex;
   align-items: center;
   justify-content: center;
-`;
-
-export const Container = styled.main`
-  padding: 20px;
-  width: 100%;
-  height: calc(100vh - 70px);
 `;
 
 interface ButtonLinkProps {

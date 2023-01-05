@@ -1,14 +1,14 @@
-import { Container, ButtonLink } from "../../shared/styled";
-import { Text } from "./styled";
+import { ButtonLink } from "../../shared/styled";
+import { Text, Main } from "./styled";
 
 const NotFound = () => {
   return (
-    <Container>
+    <Main>
       <Text>Page is not found...</Text>
       <ButtonLink to="/" center="true">
         back home
       </ButtonLink>
-    </Container>
+    </Main>
   );
 };
 
