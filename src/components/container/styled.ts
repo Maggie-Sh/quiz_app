@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { df_ac_jc, df_ac } from "../../shared/styled";
+import { df_ac_jc } from "../../shared/styled";
 
 export const Main = styled.main`
   padding: 20px;

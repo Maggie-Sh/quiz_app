@@ -1,10 +1,12 @@
 export enum ActionType {
   EXPAND = "EXPAND",
-  CHANGE_EXPANDED = "CHANGE_EXPANDED",
-  UNSET = "UNSET",
+  CHANGE_SELECTED = "CHANGE_SELECTED",
 }
 
-export type Payload = number | string | null;
+export type Payload = {
+  id?: number | string | null;
+  expanded?: boolean;
+};
 
 export interface Action {
   type: ActionType;
@@ -12,21 +14,17 @@ export interface Action {
 }
 
 export interface State {
-  expanded: boolean;
-  id: Payload;
+  expanded: Payload["expanded"];
+  id: Payload["id"];
 }
-
-export const initialState: State = { expanded: false, id: null };
 
 export const expandReducer = (state: State, action: Action): State => {
   const { type, payload } = action;
   switch (type) {
     case ActionType.EXPAND:
-      return { expanded: true, id: payload };
-    case ActionType.CHANGE_EXPANDED:
-      return { ...state, id: payload };
-    case ActionType.UNSET:
-      return { expanded: false, id: null };
+      return { ...state, expanded: payload.expanded };
+    case ActionType.CHANGE_SELECTED:
+      return { expanded: false, id: payload.id };
     default:
       return state;
   }
