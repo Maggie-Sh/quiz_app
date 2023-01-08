@@ -5,25 +5,22 @@
     "options": [
       {
         "id": 1,
-        "content": "Amsterdam",
-        "isCorrect": false
+        "content": "Amsterdam"
       },
       {
         "id": 2,
-        "content": "Lisbon",
-        "isCorrect": true
+        "content": "Lisbon"
       },
       {
         "id": 3,
-        "content": "Madrid",
-        "isCorrect": false
+        "content": "Madrid"
       },
       {
         "id": 4,
-        "content": "Monaco",
-        "isCorrect": false
+        "content": "Monaco"
       }
-    ]
+    ],
+    "correctOption": 2
   },
   {
     "id": 2,
@@ -31,25 +28,22 @@
     "options": [
       {
         "id": 1,
-        "content": "Seoul",
-        "isCorrect": true
+        "content": "Seoul"
       },
       {
         "id": 2,
-        "content": "Singapore",
-        "isCorrect": false
+        "content": "Singapore"
       },
       {
         "id": 3,
-        "content": "Beijing",
-        "isCorrect": false
+        "content": "Beijing"
       },
       {
         "id": 4,
-        "content": "Manila",
-        "isCorrect": false
+        "content": "Manila"
       }
-    ]
+    ],
+    "correctOption": 1
   },
   {
     "id": 3,
@@ -57,25 +51,22 @@
     "options": [
       {
         "id": 1,
-        "content": "Brazzaville",
-        "isCorrect": false
+        "content": "Brazzaville"
       },
       {
         "id": 2,
-        "content": "Dakar",
-        "isCorrect": false
+        "content": "Dakar"
       },
       {
         "id": 3,
-        "content": "Georgetown",
-        "isCorrect": false
+        "content": "Georgetown"
       },
       {
         "id": 4,
-        "content": "Antananarivo",
-        "isCorrect": true
+        "content": "Antananarivo"
       }
-    ]
+    ],
+    "correctOption": 4
   },
   {
     "id": 4,
@@ -83,25 +74,22 @@
     "options": [
       {
         "id": 1,
-        "content": "Canberra",
-        "isCorrect": false
+        "content": "Canberra"
       },
       {
         "id": 2,
-        "content": "Wellington",
-        "isCorrect": true
+        "content": "Wellington"
       },
       {
         "id": 3,
-        "content": "Suva",
-        "isCorrect": false
+        "content": "Suva"
       },
       {
         "id": 4,
-        "content": "Port Moresby",
-        "isCorrect": false
+        "content": "Port Moresby"
       }
-    ]
+    ],
+    "correctOption": 2
   },
   {
     "id": 5,
@@ -109,25 +97,22 @@
     "options": [
       {
         "id": 1,
-        "content": "Santiago",
-        "isCorrect": false
+        "content": "Santiago"
       },
       {
         "id": 2,
-        "content": "Asunción",
-        "isCorrect": false
+        "content": "Asunción"
       },
       {
         "id": 3,
-        "content": "Lima",
-        "isCorrect": true
+        "content": "Lima"
       },
       {
         "id": 4,
-        "content": "Caracas",
-        "isCorrect": false
+        "content": "Caracas"
       }
-    ]
+    ],
+    "correctOption": 3
   },
   {
     "id": 6,
@@ -135,25 +120,22 @@
     "options": [
       {
         "id": 1,
-        "content": "Yerevan",
-        "isCorrect": true
+        "content": "Yerevan"
       },
       {
         "id": 2,
-        "content": "Bern",
-        "isCorrect": false
+        "content": "Bern"
       },
       {
         "id": 3,
-        "content": "Tbilisi",
-        "isCorrect": false
+        "content": "Tbilisi"
       },
       {
         "id": 4,
-        "content": "Tallinn",
-        "isCorrect": false
+        "content": "Tallinn"
       }
-    ]
+    ],
+    "correctOption": 1
   },
   {
     "id": 7,
@@ -161,25 +143,22 @@
     "options": [
       {
         "id": 1,
-        "content": "Hanoi",
-        "isCorrect": false
+        "content": "Hanoi"
       },
       {
         "id": 2,
-        "content": "Bangkok",
-        "isCorrect": true
+        "content": "Bangkok"
       },
       {
         "id": 3,
-        "content": "Kuala Lumpur",
-        "isCorrect": false
+        "content": "Kuala Lumpur"
       },
       {
         "id": 4,
-        "content": "Vientiane",
-        "isCorrect": false
+        "content": "Vientiane"
       }
-    ]
+    ],
+    "correctOption": 2
   },
   {
     "id": 8,
@@ -187,25 +166,22 @@
     "options": [
       {
         "id": 1,
-        "content": "Mexico City",
-        "isCorrect": false
+        "content": "Mexico City"
       },
       {
         "id": 2,
-        "content": "Nuuk",
-        "isCorrect": false
+        "content": "Nuuk"
       },
       {
         "id": 3,
-        "content": "Havana",
-        "isCorrect": false
+        "content": "Havana"
       },
       {
         "id": 4,
-        "content": "Ottawa",
-        "isCorrect": true
+        "content": "Ottawa"
       }
-    ]
+    ],
+    "correctOption": 4
   },
   {
     "id": 9,
@@ -213,25 +189,22 @@
     "options": [
       {
         "id": 1,
-        "content": "Tripoli",
-        "isCorrect": false
+        "content": "Tripoli"
       },
       {
         "id": 2,
-        "content": "Cairo",
-        "isCorrect": true
+        "content": "Cairo"
       },
       {
         "id": 3,
-        "content": "Rabat",
-        "isCorrect": false
+        "content": "Rabat"
       },
       {
         "id": 4,
-        "content": "Ottawa",
-        "isCorrect": false
+        "content": "Ottawa"
       }
-    ]
+    ],
+    "correctOption": 2
   },
   {
     "id": 10,
@@ -239,24 +212,21 @@
     "options": [
       {
         "id": 1,
-        "content": "Buenos Aires",
-        "isCorrect": false
+        "content": "Buenos Aires"
       },
       {
         "id": 2,
-        "content": "Bogotá",
-        "isCorrect": false
+        "content": "Bogotá"
       },
       {
         "id": 3,
-        "content": "Quito",
-        "isCorrect": false
+        "content": "Quito"
       },
       {
         "id": 4,
-        "content": "Montevideo",
-        "isCorrect": true
+        "content": "Montevideo"
       }
-    ]
+    ],
+    "correctOption": 4
   }
 ]

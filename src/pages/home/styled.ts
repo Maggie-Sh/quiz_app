@@ -1,12 +1,11 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { df_ac_jc } from "../../shared/styled";
+import { df_ac_jc, typo } from "../../shared/styled";
 
 export const Heading = styled.h1`
   text-align: center;
   font-size: 34px;
   line-height: 38px;
-  margin-bottom: 10px;
 `;
 
 export const Info = styled.p`
@@ -16,16 +15,16 @@ export const Info = styled.p`
 `;
 
 export const Nav = styled.nav`
-  margin-top: 20px;
   display: block;
   width: 100%;
   ${df_ac_jc}
   flex-direction: column;
   gap: 8px;
+  margin-top: 10px;
 `;
 
 export const CustomLink = styled(Link)`
-  font-size: 24px;
+  ${typo}
   font-weight: 700;
   color: #ac3b61;
   position: relative;

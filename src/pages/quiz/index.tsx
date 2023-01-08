@@ -1,8 +1,12 @@
 import { useEffect, useState } from "react";
 import Container from "../../components/container";
-import { ButtonLink } from "../../shared/styled";
-import { Counter } from "./styled";
-import QuizContent from "../../components/quiz-content";
+import { FilledButton } from "../../shared/styled";
+import { CenteredContainer, Counter, QuizName } from "./styled";
+import QuizQuestions from "../../components/quiz-questions";
+import { useAppDispatch } from "../../hooks/hooks.redux";
+import { setList } from "../../features/quiz/quizSlice";
+import capitals from "../../data/capitals.json";
+import Results from "../../components/results";
 
 enum Status {
   Not_Started = "NOT_STARTED",
@@ -15,7 +19,12 @@ const Quiz = () => {
   const [timer, setTimer] = useState(3);
   const [status, setStatus] = useState(Status.Not_Started);
 
+  const dispatch = useAppDispatch();
+
   const handleStatusChange = (value: Status) => {
+    if (value === Status.Is_Loading) {
+      dispatch(setList(capitals));
+    }
     setStatus(value);
   };
 
@@ -33,24 +42,20 @@ const Quiz = () => {
   }, [status, timer]);
 
   return (
-    <Container
-      center={
-        status === Status.Not_Started || status === Status.Is_Loading
-          ? "true"
-          : ""
-      }
-    >
+    <Container>
       {status === Status.Not_Started ? (
-        <ButtonLink
-          as="button"
-          onClick={() => handleStatusChange(Status.Is_Loading)}
-        >
-          start quiz
-        </ButtonLink>
+        <CenteredContainer>
+          <QuizName>Countries and Capitals quiz</QuizName>
+          <FilledButton onClick={() => handleStatusChange(Status.Is_Loading)}>
+            start
+          </FilledButton>
+        </CenteredContainer>
       ) : status === Status.Is_Loading ? (
         <Counter>{timer}</Counter>
+      ) : status === Status.In_Progress ? (
+        <QuizQuestions handleFinish={handleStatusChange} />
       ) : (
-        <QuizContent />
+        <Results handleStatusChange={handleStatusChange} />
       )}
     </Container>
   );

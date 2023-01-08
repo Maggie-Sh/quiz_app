@@ -3,13 +3,12 @@ import { Main, Card } from "./styled";
 
 interface Props {
   children: ReactNode;
-  center?: string;
 }
 
-const Container = ({ children, center }: Props) => {
+const Container = ({ children }: Props) => {
   return (
     <Main>
-      <Card className={center ? "centered" : ""}>{children}</Card>
+      <Card>{children}</Card>
     </Main>
   );
 };
