@@ -59,10 +59,11 @@ export const Message = styled.p`
 `;
 
 export const Section = styled.section`
-  ${df_ac}
+  ${df_ac_jc}
   gap:30px;
+  width: 100%;
   &.dir-column {
-    @media (max-width: 420px) {
+    @media (max-width: 768px) {
       flex-direction: column;
       gap: 10px;
       width: 100%;

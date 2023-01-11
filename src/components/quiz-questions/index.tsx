@@ -12,12 +12,14 @@ import { FilledButton } from "../../shared/styled";
 import { ID, Status } from "../../features/quiz/types";
 import { useAppDispatch } from "../../hooks/hooks.redux";
 import { increase } from "../../features/correct-answers-count/correctAnswersCountSlice";
+import { useParams } from "react-router-dom";
 
 interface Props {
   handleFinish: (status: Status) => void;
 }
 
 const QuizQuestions = ({ handleFinish }: Props) => {
+  const { quiz } = useParams();
   const questions = useAppSelector((state) => state.quiz);
   const correctAnswersCount = useAppSelector(
     (state) => state.correctAnswersCount
@@ -39,33 +41,46 @@ const QuizQuestions = ({ handleFinish }: Props) => {
     }
   };
 
+  console.log(questions);
+
   return (
     <>
       <QuizHeader>{`${currentIndex + 1} of ${questions.length}`}</QuizHeader>
       <Content>
-        {questions?.map((q) => (
+        {questions?.map((q, i) => (
           <Question key={q.id} currentIndex={currentIndex}>
             <QuestionHeader>{q.question}</QuestionHeader>
-            <Options>
-              {q.options.map((option) => (
-                <Option
-                  key={option.id}
-                  disabled={selectedOptionId ? true : false}
-                  onClick={() => handleSelect(option.id, q.correctOption)}
-                  className={`${
-                    selectedOptionId &&
-                    q.correctOption === option.id &&
-                    "correct"
-                  } ${
-                    selectedOptionId === option.id &&
-                    selectedOptionId !== q.correctOption &&
-                    "wrong"
-                  }`}
-                >
-                  {option.content}
-                </Option>
-              ))}
-            </Options>
+            <div
+              className={`options-wrapper ${
+                currentIndex === i ? "current" : ""
+              }`}
+            >
+              {q.code && (
+                <pre>
+                  <code>{q.code}</code>
+                </pre>
+              )}
+              <Options className={quiz === "javascript" ? "vertical" : ""}>
+                {q.options.map((option) => (
+                  <Option
+                    key={option.id}
+                    disabled={selectedOptionId ? true : false}
+                    onClick={() => handleSelect(option.id, q.correctOption)}
+                    className={`${
+                      selectedOptionId &&
+                      q.correctOption === option.id &&
+                      "correct"
+                    } ${
+                      selectedOptionId === option.id &&
+                      selectedOptionId !== q.correctOption &&
+                      "wrong"
+                    }`}
+                  >
+                    {option.content}
+                  </Option>
+                ))}
+              </Options>
+            </div>
           </Question>
         ))}
       </Content>

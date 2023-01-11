@@ -12,8 +12,9 @@ export const Card = styled.div`
   background-color: #fff;
   border-radius: 20px;
   padding: 20px;
-  width: 50%;
+  width: 70%;
   min-height: 250px;
+  max-height: 90%;
   box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.1);
   ${df_ac_jc}
   flex-direction: column;

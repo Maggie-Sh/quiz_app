@@ -17,6 +17,7 @@ export type Options = Array<Option>;
 export type Question = {
   id: ID;
   question: string;
+  code?: string;
   options: Options;
   correctOption: ID;
 };

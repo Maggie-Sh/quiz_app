@@ -28,6 +28,10 @@ export const df_ac_jc = css`
 export const typo = css`
   font-size: 24px;
   line-height: 28px;
+  @media (max-width: 768px) {
+    font-size: 20px;
+    line-height: 23px;
+  }
 `;
 
 export const FilledButton = styled.button`
@@ -55,5 +59,8 @@ export const FilledButton = styled.button`
   &:disabled {
     cursor: default;
     opacity: 0.8;
+  }
+  @media (max-width: 768px) {
+    width: 100%;
   }
 `;

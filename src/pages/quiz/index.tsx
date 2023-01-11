@@ -5,17 +5,15 @@ import { CenteredContainer, Counter, QuizName } from "./styled";
 import QuizQuestions from "../../components/quiz-questions";
 import { useAppDispatch } from "../../hooks/hooks.redux";
 import { setList } from "../../features/quiz/quizSlice";
+import { Status } from "../../features/quiz/types";
 import capitals from "../../data/capitals.json";
+import javascript from "../../data/javascript.json";
 import Results from "../../components/results";
-
-enum Status {
-  Not_Started = "NOT_STARTED",
-  Is_Loading = "IS_LOADING",
-  In_Progress = "IN_PROGRESS",
-  Finished = "FINISHED",
-}
+import { useParams } from "react-router-dom";
 
 const Quiz = () => {
+  const { quiz } = useParams();
+
   const [timer, setTimer] = useState(3);
   const [status, setStatus] = useState(Status.Not_Started);
 
@@ -23,7 +21,12 @@ const Quiz = () => {
 
   const handleStatusChange = (value: Status) => {
     if (value === Status.Is_Loading) {
-      dispatch(setList(capitals));
+      quiz === "capitals"
+        ? dispatch(setList(capitals))
+        : dispatch(setList(javascript));
+    }
+    if (value === Status.Not_Started) {
+      setTimer(3);
     }
     setStatus(value);
   };

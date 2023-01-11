@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { df_ac, typo } from "../../shared/styled";
+import { typo } from "../../shared/styled";
 
 export const QuizHeader = styled.h5`
   width: 100%;
@@ -9,7 +9,8 @@ export const QuizHeader = styled.h5`
 `;
 
 export const Content = styled.div`
-  ${df_ac}
+  display: flex;
+  align-items: flex-start;
   width: 100%;
   overflow-x: hidden;
 `;
@@ -22,18 +23,43 @@ export const Question = styled.div<QuestionProps>`
   min-width: 100%;
   transform: translateX(${({ currentIndex }) => `${currentIndex * -100}%`});
   transition: transform 250ms ease-in;
+  & .options-wrapper {
+    max-height: 100px;
+    &.current {
+      max-height: 100%;
+    }
+    height: fit-content;
+    overflow-y: auto;
+    & pre {
+      background-color: #ebebeb;
+      border-radius: 5px;
+      padding: 10px;
+    }
+  }
 `;
 
 export const QuestionHeader = styled.h3`
   ${typo}
   text-align: center;
+  margin-bottom: 20px;
 `;
 
 export const Options = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-  margin: 10px 0;
+  margin-top: 10px;
+  @media (max-width: 1024px) {
+    &.vertical {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  @media (max-width: 420px) {
+    gap: 10px;
+  }
 `;
 
 export const Option = styled.button`

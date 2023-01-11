@@ -1,10 +1,12 @@
 [
   {
     "id": 1,
-    "name": "Capitals"
+    "name": "Capitals",
+    "to": "capitals"
   },
   {
     "id": 2,
-    "name": "JavaScript"
+    "name": "JavaScript",
+    "to": "javascript"
   }
 ]

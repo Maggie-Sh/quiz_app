@@ -10,7 +10,7 @@ export const quizSlice = createSlice({
   initialState,
   reducers: {
     setList: (state, action: PayloadAction<Questions>) => action.payload,
-    clearList: () => [],
+    clearList: () => initialState,
   },
 });
 
