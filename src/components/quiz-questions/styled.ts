@@ -37,7 +37,7 @@ export const Question = styled.div<QuestionProps>`
   min-width: 100%;
   transform: translateX(${({ currentIndex }) => `${currentIndex * -100}%`});
   transition: transform 250ms ease-in;
-  padding: 0 5px;
+  padding: 0 10px;
   & .options-wrapper {
     max-height: 120px;
     overflow: hidden;
@@ -51,6 +51,8 @@ export const Question = styled.div<QuestionProps>`
       border-radius: 5px;
       padding: 10px;
       margin-bottom: 20px;
+      width: 100%;
+      overflow-x: scroll;
     }
     @media (max-width: 768px) {
       max-height: 220px;
@@ -84,10 +86,13 @@ export const Options = styled.div`
 export const Option = styled.button`
   padding: 10px 20px;
   font-size: 20px;
+  color: #222;
   border: 3px solid #bab2b5;
   border-radius: 5px;
-  &:active:hover {
-    background-color: #ebebeb;
+  @media (hover: hover) {
+    &:active:hover {
+      background-color: #ebebeb;
+    }
   }
   &.correct {
     border-color: #0cc078;

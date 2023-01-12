@@ -16,7 +16,7 @@ export const Card = styled.div<CardProps>`
   background-color: #fff;
   border-radius: 20px;
   padding: 20px;
-  width: ${({ sm }) => (sm ? "40%" : "70%")};
+  width: ${({ sm }) => (sm ? "40%" : "50%")};
   min-height: 250px;
   max-height: 90%;
   box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.1);

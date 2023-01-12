@@ -57,8 +57,10 @@ export const FilledButton = styled.button`
   border-radius: 10px;
   background-color: #ac3b61;
   color: #fff;
-  &:hover {
-    opacity: 0.95;
+  @media (hover: hover) {
+    &:hover {
+      opacity: 0.95;
+    }
   }
   &:disabled {
     cursor: default;
@@ -69,7 +71,7 @@ export const FilledButton = styled.button`
     font-size: 24px;
     line-height: 26px;
     &.additional-m {
-      max-width: calc(100% - 10px);
+      max-width: calc(100% - 20px);
     }
   }
 `;
