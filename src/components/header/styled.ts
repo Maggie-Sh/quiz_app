@@ -27,8 +27,10 @@ export const IconLink = styled.a`
     font-size: 30px;
   }
   position: relative;
-  &:hover .title {
-    visibility: visible;
+  @media (hover: hover) {
+    &:hover .title {
+      visibility: visible;
+    }
   }
 `;
 

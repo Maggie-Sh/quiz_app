@@ -41,7 +41,9 @@ export const CustomLink = styled(Link)`
     transition: transform 150ms ease-out;
     transform-origin: left;
   }
-  &:hover::after {
-    transform: scale(1);
+  @media (hover: hover) {
+    &:hover::after {
+      transform: scale(1);
+    }
   }
 `;
