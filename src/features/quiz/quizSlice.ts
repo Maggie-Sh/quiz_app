@@ -1,7 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { PayloadAction } from "@reduxjs/toolkit";
-import { RootState } from "../../store";
-import { Questions, SelectAnswerPayload } from "./types";
+import { Questions } from "./types";
 
 const initialState: Questions = [];
 

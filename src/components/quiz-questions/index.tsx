@@ -21,9 +21,6 @@ interface Props {
 const QuizQuestions = ({ handleFinish }: Props) => {
   const { quiz } = useParams();
   const questions = useAppSelector((state) => state.quiz);
-  const correctAnswersCount = useAppSelector(
-    (state) => state.correctAnswersCount
-  );
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedOptionId, setSelectedOptionId] = useState<null | ID>(null);
 
