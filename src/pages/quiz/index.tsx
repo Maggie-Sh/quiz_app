@@ -45,7 +45,7 @@ const Quiz = () => {
   }, [status, timer]);
 
   return (
-    <Container>
+    <Container sm={status !== Status.In_Progress ? "sm" : ""}>
       {status === Status.Not_Started ? (
         <CenteredContainer>
           <QuizName>Countries and Capitals quiz</QuizName>

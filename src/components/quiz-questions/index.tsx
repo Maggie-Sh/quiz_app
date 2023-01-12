@@ -85,6 +85,7 @@ const QuizQuestions = ({ handleFinish }: Props) => {
         ))}
       </Content>
       <FilledButton
+        className="additional-m"
         disabled={selectedOptionId ? false : true}
         onClick={
           currentIndex < questions.length - 1

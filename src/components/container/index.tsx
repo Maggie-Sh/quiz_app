@@ -3,12 +3,13 @@ import { Main, Card } from "./styled";
 
 interface Props {
   children: ReactNode;
+  sm?: string;
 }
 
-const Container = ({ children }: Props) => {
+const Container = ({ children, sm }: Props) => {
   return (
     <Main>
-      <Card>{children}</Card>
+      <Card sm={sm}>{children}</Card>
     </Main>
   );
 };

@@ -8,17 +8,24 @@ export const Main = styled.main`
   ${df_ac_jc}
 `;
 
-export const Card = styled.div`
+interface CardProps {
+  sm?: string;
+}
+
+export const Card = styled.div<CardProps>`
   background-color: #fff;
   border-radius: 20px;
   padding: 20px;
-  width: 70%;
+  width: ${({ sm }) => (sm ? "40%" : "70%")};
   min-height: 250px;
   max-height: 90%;
   box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.1);
   ${df_ac_jc}
   flex-direction: column;
   gap: 20px;
+  @media (max-width: 1024px) {
+    width: ${({ sm }) => sm && "50%"};
+  }
   @media (max-width: 768px) {
     width: 80%;
   }

@@ -16,7 +16,7 @@ const Home = () => {
   const quizes: Quizes = quizList;
 
   return (
-    <Container>
+    <Container sm="sm">
       <Heading>Welcome!</Heading>
       <Info>Choose a quiz to get started</Info>
       <Nav>

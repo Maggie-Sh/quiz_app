@@ -24,7 +24,7 @@
   },
   {
     "id": 2,
-    "question": "Which will be the output of the following code snippet?",
+    "question": "What are values of sum1 and sum2?",
     "code": "  let num1 = 5;\n  let num2 = 5;\n\n  const f = () => {\n    num1 = 3;\n    let num2 = 3;\n    return num1 + num2;\n  };\n\n  const sum1 = f();\n  const sum2 = num1 + num2;",
     "options": [
       {
@@ -48,7 +48,7 @@
   },
   {
     "id": 3,
-    "question": "Which will be the result of following expression?",
+    "question": "Which will be the result of the following expression?",
     "code": "(3 < 2 < 1) + 1",
     "options": [
       {
@@ -73,7 +73,7 @@
   {
     "id": 4,
     "question": "Which will be the output of the following code snippet? Guess the order.",
-    "code": "  setTimeout(() => console.log(1), 1000);\n  setTimeout(() => console.log(2), 1000);\n  setTimeout(() => console.log(3));\n  setTimeout(() => console.log(4), 2000);\n  setTimeout(() => console.log(6), \"1000ms\");\n  console.log(6);",
+    "code": "  setTimeout(() => console.log(1), 1000);\n  setTimeout(() => console.log(2), \"1000\");\n  setTimeout(() => console.log(3));\n  setTimeout(() => console.log(4), 2000);\n  setTimeout(() => console.log(5), \"1000ms\");\n  console.log(6);",
     "options": [
       {
         "id": 1,
@@ -101,26 +101,26 @@
     "options": [
       {
         "id": 1,
-        "content": "[1, 2, 3, 4, 5] [1, 2, 3, 4, 5]"
+        "content": "[1, 2, 3, 4, 5]  [1, 2, 3, 4, 5]"
       },
       {
         "id": 2,
-        "content": "[1, 2, 3, 4, 5] [1, 2, 6, 7, 5]"
+        "content": "[1, 2, 3, 4, 5]  [1, 2, 6, 7, 5]"
       },
       {
         "id": 3,
-        "content": "[1, 2, 6, 7, 5] [1, 2, 6, 7, 5]"
+        "content": "[1, 2, 6, 7, 5]  [1, 2, 6, 7, 5]"
       },
       {
         "id": 4,
-        "content": "[1, 2, 6, 7, 5] [3, 4]"
+        "content": "[1, 2, 6, 7, 5]  [3, 4]"
       }
     ],
     "correctOption": 4
   },
   {
     "id": 6,
-    "question": "Which will be the value of result",
+    "question": "Which will be the value of result.",
     "code": " const result = 1 + 1 + \"1\" + (2 + 3);",
     "options": [
       {
@@ -149,19 +149,19 @@
     "options": [
       {
         "id": 1,
-        "content": "[\"name\", \"age\", \"isAdult\"];"
+        "content": "[\"name\", \"age\", \"isAdult\"]"
       },
       {
         "id": 2,
-        "content": "[\"John\", 5, false];"
+        "content": "[\"John\", 5, false]"
       },
       {
         "id": 3,
-        "content": "[[\"name\",\"john\"],[\"age\",5],[\"isAdult\",false]]"
+        "content": "[ [\"name\", \"John\"], [\"age\", 5], [\"isAdult\", false] ]"
       },
       {
         "id": 4,
-        "content": "[\"name\",\"john\"]"
+        "content": "[\"name\", \"John\"]"
       }
     ],
     "correctOption": 1
@@ -180,7 +180,7 @@
       },
       {
         "id": 3,
-        "content": "resolved"
+        "content": "succeeded"
       },
       {
         "id": 4,

@@ -32,6 +32,10 @@ export const typo = css`
     font-size: 20px;
     line-height: 23px;
   }
+  @media (max-width: 420px) {
+    font-size: 18px;
+    line-height: 20px;
+  }
 `;
 
 export const FilledButton = styled.button`
@@ -62,5 +66,10 @@ export const FilledButton = styled.button`
   }
   @media (max-width: 768px) {
     width: 100%;
+    font-size: 24px;
+    line-height: 26px;
+    &.additional-m {
+      max-width: calc(100% - 10px);
+    }
   }
 `;
