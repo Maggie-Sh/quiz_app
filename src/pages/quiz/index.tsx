@@ -48,7 +48,7 @@ const Quiz = () => {
     <Container sm={status !== Status.In_Progress ? "sm" : ""}>
       {status === Status.Not_Started ? (
         <CenteredContainer>
-          <QuizName>Countries and Capitals quiz</QuizName>
+          <QuizName>{`${quiz} quiz`}</QuizName>
           <FilledButton onClick={() => handleStatusChange(Status.Is_Loading)}>
             start
           </FilledButton>

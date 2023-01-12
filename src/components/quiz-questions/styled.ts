@@ -52,7 +52,7 @@ export const Question = styled.div<QuestionProps>`
       padding: 10px;
       margin-bottom: 20px;
       width: 100%;
-      overflow-x: scroll;
+      overflow-x: auto;
     }
     @media (max-width: 768px) {
       max-height: 220px;
@@ -84,13 +84,13 @@ export const Options = styled.div`
 `;
 
 export const Option = styled.button`
-  padding: 10px 20px;
+  padding: 10px;
   font-size: 20px;
   color: #222;
   border: 3px solid #bab2b5;
   border-radius: 5px;
   @media (hover: hover) {
-    &:active:hover {
+    &:hover:not([disabled]) {
       background-color: #ebebeb;
     }
   }

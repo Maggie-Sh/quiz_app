@@ -24,7 +24,7 @@ export const Card = styled.div<CardProps>`
   flex-direction: column;
   gap: 20px;
   @media (max-width: 1024px) {
-    width: ${({ sm }) => sm && "50%"};
+    width: ${({ sm }) => (sm ? "50%" : "60%")};
   }
   @media (max-width: 768px) {
     width: 80%;
