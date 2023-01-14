@@ -38,8 +38,6 @@ const QuizQuestions = ({ handleFinish }: Props) => {
     }
   };
 
-  console.log(questions);
-
   return (
     <>
       <QuizHeader>{`${currentIndex + 1} of ${questions.length}`}</QuizHeader>
@@ -57,7 +55,11 @@ const QuizQuestions = ({ handleFinish }: Props) => {
                   <code>{q.code}</code>
                 </pre>
               )}
-              <Options className={quiz === "javascript" ? "vertical" : ""}>
+              <Options
+                className={
+                  quiz?.toLocaleLowerCase() === "javascript" ? "long" : ""
+                }
+              >
                 {q.options.map((option) => (
                   <Option
                     key={option.id}

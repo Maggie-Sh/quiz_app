@@ -5,7 +5,9 @@ export const Main = styled.main`
   padding: 20px;
   width: 100%;
   height: calc(100vh - 70px);
+  padding-bottom: 70px;
   ${df_ac_jc}
+  overflow: hidden;
 `;
 
 interface CardProps {

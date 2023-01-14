@@ -21,9 +21,8 @@ const Quiz = () => {
 
   const handleStatusChange = (value: Status) => {
     if (value === Status.Is_Loading) {
-      quiz === "capitals"
-        ? dispatch(setList(capitals))
-        : dispatch(setList(javascript));
+      quiz?.toLowerCase() === "capitals" && dispatch(setList(capitals));
+      quiz?.toLowerCase() === "javascript" && dispatch(setList(javascript));
     }
     if (value === Status.Not_Started) {
       setTimer(3);
