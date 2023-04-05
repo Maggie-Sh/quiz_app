@@ -6,7 +6,7 @@ const NotFound = () => {
   return (
     <Main>
       <Text>Page is not found...</Text>
-      <FilledButton as={Link} to="/">
+      <FilledButton as={Link} to="/" className="centered">
         back home
       </FilledButton>
     </Main>

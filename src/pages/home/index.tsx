@@ -7,7 +7,6 @@ import quizList from "../../data/quizes.json";
 type Quiz = {
   id: number;
   name: string;
-  to: string;
 };
 
 type Quizes = Array<Quiz>;
@@ -21,7 +20,7 @@ const Home = () => {
       <Info>Choose a quiz to get started</Info>
       <Nav>
         {quizes?.map((quiz) => (
-          <CustomLink key={quiz.id} to={`/quizes/${quiz.to}`}>
+          <CustomLink key={quiz.id} to={`/quizes/${quiz.name}`}>
             {quiz.name}
           </CustomLink>
         ))}

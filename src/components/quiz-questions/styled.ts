@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { typo } from "../../shared/styled";
+import { scrollbar, typo } from "../../shared/styled";
 
 export const QuizHeader = styled.h5`
   width: 100%;
@@ -19,14 +19,7 @@ export const Content = styled.div`
   ::-webkit-scrollbar {
     width: 5px;
   }
-  ::-webkit-scrollbar-track {
-    background: #eee2dc;
-    border-radius: 5px;
-  }
-  ::-webkit-scrollbar-thumb {
-    background: #bab2b5;
-    border-radius: 5px;
-  }
+  ${scrollbar}
 `;
 
 interface QuestionProps {
@@ -36,7 +29,7 @@ interface QuestionProps {
 export const Question = styled.div<QuestionProps>`
   min-width: 100%;
   transform: translateX(${({ currentIndex }) => `${currentIndex * -100}%`});
-  transition: transform 250ms ease-in;
+  transition: transform 150ms ease-in;
   padding: 0 10px;
   & .options-wrapper {
     max-height: 120px;
@@ -52,7 +45,11 @@ export const Question = styled.div<QuestionProps>`
       padding: 10px;
       margin-bottom: 20px;
       width: 100%;
-      overflow-x: scroll;
+      overflow-x: auto;
+      ::-webkit-scrollbar {
+        height: 5px;
+      }
+      ${scrollbar}
     }
     @media (max-width: 768px) {
       max-height: 220px;
@@ -74,7 +71,7 @@ export const Options = styled.div`
   @media (max-width: 1024px) {
     margin-top: 0;
     gap: 10px;
-    &.vertical {
+    &.long {
       grid-template-columns: repeat(1, 1fr);
     }
   }
@@ -84,13 +81,13 @@ export const Options = styled.div`
 `;
 
 export const Option = styled.button`
-  padding: 10px 20px;
+  padding: 10px;
   font-size: 20px;
   color: #222;
   border: 3px solid #bab2b5;
   border-radius: 5px;
   @media (hover: hover) {
-    &:active:hover {
+    &:hover:not([disabled]) {
       background-color: #ebebeb;
     }
   }

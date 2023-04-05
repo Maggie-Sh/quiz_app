@@ -13,6 +13,8 @@ export const quizSlice = createSlice({
   },
 });
 
+console.log("testing, lalala");
+
 export const { setList, clearList } = quizSlice.actions;
 
 export default quizSlice.reducer;

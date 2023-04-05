@@ -21,9 +21,8 @@ const Quiz = () => {
 
   const handleStatusChange = (value: Status) => {
     if (value === Status.Is_Loading) {
-      quiz === "capitals"
-        ? dispatch(setList(capitals))
-        : dispatch(setList(javascript));
+      quiz?.toLowerCase() === "capitals" && dispatch(setList(capitals));
+      quiz?.toLowerCase() === "javascript" && dispatch(setList(javascript));
     }
     if (value === Status.Not_Started) {
       setTimer(3);
@@ -48,7 +47,7 @@ const Quiz = () => {
     <Container sm={status !== Status.In_Progress ? "sm" : ""}>
       {status === Status.Not_Started ? (
         <CenteredContainer>
-          <QuizName>Countries and Capitals quiz</QuizName>
+          <QuizName>{`${quiz} quiz`}</QuizName>
           <FilledButton onClick={() => handleStatusChange(Status.Is_Loading)}>
             start
           </FilledButton>

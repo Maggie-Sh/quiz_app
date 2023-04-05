@@ -5,7 +5,9 @@ export const Main = styled.main`
   padding: 20px;
   width: 100%;
   height: calc(100vh - 70px);
+  padding-bottom: 70px;
   ${df_ac_jc}
+  overflow: hidden;
 `;
 
 interface CardProps {
@@ -24,7 +26,7 @@ export const Card = styled.div<CardProps>`
   flex-direction: column;
   gap: 20px;
   @media (max-width: 1024px) {
-    width: ${({ sm }) => sm && "50%"};
+    width: ${({ sm }) => (sm ? "50%" : "60%")};
   }
   @media (max-width: 768px) {
     width: 80%;

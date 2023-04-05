@@ -23,7 +23,7 @@ const Header = () => {
         <Logo to="/">Quiz game</Logo>
         {externalLinks?.map((link) => (
           <IconLink href={link.to} target="_blank">
-            <SvgIcon htmlColor="#fff">{link.icon}</SvgIcon>
+            <SvgIcon htmlColor="#ffffff">{link.icon}</SvgIcon>
             <Title className="title">{link.name}</Title>
           </IconLink>
         ))}

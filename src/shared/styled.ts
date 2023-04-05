@@ -38,6 +38,17 @@ export const typo = css`
   }
 `;
 
+export const scrollbar = css`
+  ::-webkit-scrollbar-track {
+    background: #eee2dc;
+    border-radius: 5px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #bab2b5;
+    border-radius: 5px;
+  }
+`;
+
 export const FilledButton = styled.button`
   font-size: 28px;
   line-height: 32px;
@@ -47,6 +58,9 @@ export const FilledButton = styled.button`
   &.small {
     ${typo}
     padding: 8px 16px;
+  }
+  &.centered {
+    margin: 0 auto;
   }
   text-decoration: none;
   display: block;
